@@ -22,6 +22,6 @@ function createWindow () {
     }
   })
 
-  win.loadURL(`file://${__dirname}/dist/index.html`)
+  win.loadURL(`file://${__dirname}/dist/RockyTube/index.html`)
 }
 // ...

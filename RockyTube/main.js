@@ -2,11 +2,21 @@ const { app, BrowserWindow } = require('electron')
 
 function createWindow() {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600
+        width: 1280,
+        height: 768,
+        minHeight: 768,
+        minWidth: 1280,
+        titleBarStyle: "default",
+        autoHideMenuBar: true,
+        show: false,
+        webPreferences: {
+            nodeIntegration: true,
+            enableRemoteModule: true,
+            contextIsolation: false
+        }
     })
 
-    win.loadURL(`file://${__dirname}/dist/index.html`)
+    win.loadURL(`file://${__dirname}/dist/RockyTube/index.html`)
 }
 
 app.whenReady().then(() => {

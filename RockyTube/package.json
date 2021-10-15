@@ -8,13 +8,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "electron": "electron-forge start",
+    "electron": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build && electron-forge start",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "package": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build && electron-forge package",
+    "make": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build && electron-forge make"
   },
   "private": true,
   "dependencies": {
